@@ -9,13 +9,27 @@
 import UIKit
 
 class SubViewController: UIViewController{
+    @IBOutlet var Label: UILabel!
+    var selectedLabel: UILabel!
     
+    
+    @IBAction func backToSub(segue: UIStoryboardSegue) {}
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
+    
+    
+
+    
+
     
 }

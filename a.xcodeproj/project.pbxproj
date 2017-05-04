@@ -16,6 +16,9 @@
 		F73A669D1EB5CB7300BDD4CF /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A669C1EB5CB7300BDD4CF /* TestCollectionViewCell.swift */; };
 		F73A669F1EB5CC6500BDD4CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A669E1EB5CC6500BDD4CF /* ViewController.swift */; };
 		F73A66A11EB5D3CD00BDD4CF /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A66A01EB5D3CD00BDD4CF /* SubViewController.swift */; };
+		F73A66A31EBA511B00BDD4CF /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A66A21EBA511B00BDD4CF /* MemoViewController.swift */; };
+		F73A66A51EBA7C8800BDD4CF /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A66A41EBA7C8800BDD4CF /* ViewController1.swift */; };
+		F73A66A71EBB5A2700BDD4CF /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A66A61EBB5A2700BDD4CF /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		F73A669C1EB5CB7300BDD4CF /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
 		F73A669E1EB5CC6500BDD4CF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F73A66A01EB5D3CD00BDD4CF /* SubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
+		F73A66A21EBA511B00BDD4CF /* MemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
+		F73A66A41EBA7C8800BDD4CF /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
+		F73A66A61EBB5A2700BDD4CF /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +110,11 @@
 				F73A666E1EB5CB6800BDD4CF /* AppDelegate.swift */,
 				F73A669E1EB5CC6500BDD4CF /* ViewController.swift */,
 				F73A669C1EB5CB7300BDD4CF /* TestCollectionViewCell.swift */,
-				F73A66721EB5CB6800BDD4CF /* Main.storyboard */,
 				F73A66A01EB5D3CD00BDD4CF /* SubViewController.swift */,
+				F73A66A41EBA7C8800BDD4CF /* ViewController1.swift */,
+				F73A66A21EBA511B00BDD4CF /* MemoViewController.swift */,
+				F73A66A61EBB5A2700BDD4CF /* ImageViewController.swift */,
+				F73A66721EB5CB6800BDD4CF /* Main.storyboard */,
 				F73A66751EB5CB6800BDD4CF /* Assets.xcassets */,
 				F73A66771EB5CB6800BDD4CF /* LaunchScreen.storyboard */,
 				F73A667A1EB5CB6800BDD4CF /* Info.plist */,
@@ -265,8 +274,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F73A66A51EBA7C8800BDD4CF /* ViewController1.swift in Sources */,
 				F73A669F1EB5CC6500BDD4CF /* ViewController.swift in Sources */,
 				F73A669D1EB5CB7300BDD4CF /* TestCollectionViewCell.swift in Sources */,
+				F73A66A71EBB5A2700BDD4CF /* ImageViewController.swift in Sources */,
+				F73A66A31EBA511B00BDD4CF /* MemoViewController.swift in Sources */,
 				F73A666F1EB5CB6800BDD4CF /* AppDelegate.swift in Sources */,
 				F73A66A11EB5D3CD00BDD4CF /* SubViewController.swift in Sources */,
 			);
@@ -513,6 +525,7 @@
 				F73A66951EB5CB6800BDD4CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F73A66961EB5CB6800BDD4CF /* Build configuration list for PBXNativeTarget "aTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +534,7 @@
 				F73A66981EB5CB6800BDD4CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F73A66991EB5CB6800BDD4CF /* Build configuration list for PBXNativeTarget "aUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +543,7 @@
 				F73A669B1EB5CB6800BDD4CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
