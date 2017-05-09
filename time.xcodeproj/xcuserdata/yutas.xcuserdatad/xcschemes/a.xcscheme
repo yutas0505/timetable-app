@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F73A666A1EB5CB6800BDD4CF"
-               BuildableName = "a.app"
-               BlueprintName = "a"
-               ReferencedContainer = "container:a.xcodeproj">
+               BuildableName = "time.app"
+               BlueprintName = "time"
+               ReferencedContainer = "container:time.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F73A667E1EB5CB6800BDD4CF"
-               BuildableName = "aTests.xctest"
-               BlueprintName = "aTests"
-               ReferencedContainer = "container:a.xcodeproj">
+               BuildableName = "timeTests.xctest"
+               BlueprintName = "timeTests"
+               ReferencedContainer = "container:time.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F73A66891EB5CB6800BDD4CF"
-               BuildableName = "aUITests.xctest"
-               BlueprintName = "aUITests"
-               ReferencedContainer = "container:a.xcodeproj">
+               BuildableName = "timeUITests.xctest"
+               BlueprintName = "timeUITests"
+               ReferencedContainer = "container:time.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F73A666A1EB5CB6800BDD4CF"
-            BuildableName = "a.app"
-            BlueprintName = "a"
-            ReferencedContainer = "container:a.xcodeproj">
+            BuildableName = "time.app"
+            BlueprintName = "time"
+            ReferencedContainer = "container:time.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F73A666A1EB5CB6800BDD4CF"
-            BuildableName = "a.app"
-            BlueprintName = "a"
-            ReferencedContainer = "container:a.xcodeproj">
+            BuildableName = "time.app"
+            BlueprintName = "time"
+            ReferencedContainer = "container:time.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F73A666A1EB5CB6800BDD4CF"
-            BuildableName = "a.app"
-            BlueprintName = "a"
-            ReferencedContainer = "container:a.xcodeproj">
+            BuildableName = "time.app"
+            BlueprintName = "time"
+            ReferencedContainer = "container:time.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

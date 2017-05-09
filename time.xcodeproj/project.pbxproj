@@ -15,7 +15,6 @@
 		F73A668F1EB5CB6800BDD4CF /* aUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A668E1EB5CB6800BDD4CF /* aUITests.swift */; };
 		F73A669D1EB5CB7300BDD4CF /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A669C1EB5CB7300BDD4CF /* TestCollectionViewCell.swift */; };
 		F73A669F1EB5CC6500BDD4CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A669E1EB5CC6500BDD4CF /* ViewController.swift */; };
-		F73A66A11EB5D3CD00BDD4CF /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A66A01EB5D3CD00BDD4CF /* SubViewController.swift */; };
 		F73A66A31EBA511B00BDD4CF /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A66A21EBA511B00BDD4CF /* MemoViewController.swift */; };
 		F73A66A51EBA7C8800BDD4CF /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A66A41EBA7C8800BDD4CF /* ViewController1.swift */; };
 		F73A66A71EBB5A2700BDD4CF /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A66A61EBB5A2700BDD4CF /* ImageViewController.swift */; };
@@ -39,21 +38,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F73A666B1EB5CB6800BDD4CF /* a.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = a.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F73A666B1EB5CB6800BDD4CF /* time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = time.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73A666E1EB5CB6800BDD4CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F73A66731EB5CB6800BDD4CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F73A66751EB5CB6800BDD4CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F73A66781EB5CB6800BDD4CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F73A667A1EB5CB6800BDD4CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F73A667F1EB5CB6800BDD4CF /* aTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F73A667F1EB5CB6800BDD4CF /* timeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = timeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73A66831EB5CB6800BDD4CF /* aTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aTests.swift; sourceTree = "<group>"; };
 		F73A66851EB5CB6800BDD4CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F73A668A1EB5CB6800BDD4CF /* aUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F73A668A1EB5CB6800BDD4CF /* timeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = timeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F73A668E1EB5CB6800BDD4CF /* aUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aUITests.swift; sourceTree = "<group>"; };
 		F73A66901EB5CB6800BDD4CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F73A669C1EB5CB7300BDD4CF /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
 		F73A669E1EB5CC6500BDD4CF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F73A66A01EB5D3CD00BDD4CF /* SubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 		F73A66A21EBA511B00BDD4CF /* MemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		F73A66A41EBA7C8800BDD4CF /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		F73A66A61EBB5A2700BDD4CF /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +85,7 @@
 		F73A66621EB5CB6800BDD4CF = {
 			isa = PBXGroup;
 			children = (
-				F73A666D1EB5CB6800BDD4CF /* a */,
+				F73A666D1EB5CB6800BDD4CF /* time */,
 				F73A66821EB5CB6800BDD4CF /* aTests */,
 				F73A668D1EB5CB6800BDD4CF /* aUITests */,
 				F73A666C1EB5CB6800BDD4CF /* Products */,
@@ -97,20 +95,19 @@
 		F73A666C1EB5CB6800BDD4CF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F73A666B1EB5CB6800BDD4CF /* a.app */,
-				F73A667F1EB5CB6800BDD4CF /* aTests.xctest */,
-				F73A668A1EB5CB6800BDD4CF /* aUITests.xctest */,
+				F73A666B1EB5CB6800BDD4CF /* time.app */,
+				F73A667F1EB5CB6800BDD4CF /* timeTests.xctest */,
+				F73A668A1EB5CB6800BDD4CF /* timeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F73A666D1EB5CB6800BDD4CF /* a */ = {
+		F73A666D1EB5CB6800BDD4CF /* time */ = {
 			isa = PBXGroup;
 			children = (
 				F73A666E1EB5CB6800BDD4CF /* AppDelegate.swift */,
 				F73A669E1EB5CC6500BDD4CF /* ViewController.swift */,
 				F73A669C1EB5CB7300BDD4CF /* TestCollectionViewCell.swift */,
-				F73A66A01EB5D3CD00BDD4CF /* SubViewController.swift */,
 				F73A66A41EBA7C8800BDD4CF /* ViewController1.swift */,
 				F73A66A21EBA511B00BDD4CF /* MemoViewController.swift */,
 				F73A66A61EBB5A2700BDD4CF /* ImageViewController.swift */,
@@ -119,6 +116,7 @@
 				F73A66771EB5CB6800BDD4CF /* LaunchScreen.storyboard */,
 				F73A667A1EB5CB6800BDD4CF /* Info.plist */,
 			);
+			name = time;
 			path = a;
 			sourceTree = "<group>";
 		};
@@ -143,9 +141,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F73A666A1EB5CB6800BDD4CF /* a */ = {
+		F73A666A1EB5CB6800BDD4CF /* time */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F73A66931EB5CB6800BDD4CF /* Build configuration list for PBXNativeTarget "a" */;
+			buildConfigurationList = F73A66931EB5CB6800BDD4CF /* Build configuration list for PBXNativeTarget "time" */;
 			buildPhases = (
 				F73A66671EB5CB6800BDD4CF /* Sources */,
 				F73A66681EB5CB6800BDD4CF /* Frameworks */,
@@ -155,14 +153,14 @@
 			);
 			dependencies = (
 			);
-			name = a;
+			name = time;
 			productName = a;
-			productReference = F73A666B1EB5CB6800BDD4CF /* a.app */;
+			productReference = F73A666B1EB5CB6800BDD4CF /* time.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F73A667E1EB5CB6800BDD4CF /* aTests */ = {
+		F73A667E1EB5CB6800BDD4CF /* timeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F73A66961EB5CB6800BDD4CF /* Build configuration list for PBXNativeTarget "aTests" */;
+			buildConfigurationList = F73A66961EB5CB6800BDD4CF /* Build configuration list for PBXNativeTarget "timeTests" */;
 			buildPhases = (
 				F73A667B1EB5CB6800BDD4CF /* Sources */,
 				F73A667C1EB5CB6800BDD4CF /* Frameworks */,
@@ -173,14 +171,14 @@
 			dependencies = (
 				F73A66811EB5CB6800BDD4CF /* PBXTargetDependency */,
 			);
-			name = aTests;
+			name = timeTests;
 			productName = aTests;
-			productReference = F73A667F1EB5CB6800BDD4CF /* aTests.xctest */;
+			productReference = F73A667F1EB5CB6800BDD4CF /* timeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F73A66891EB5CB6800BDD4CF /* aUITests */ = {
+		F73A66891EB5CB6800BDD4CF /* timeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F73A66991EB5CB6800BDD4CF /* Build configuration list for PBXNativeTarget "aUITests" */;
+			buildConfigurationList = F73A66991EB5CB6800BDD4CF /* Build configuration list for PBXNativeTarget "timeUITests" */;
 			buildPhases = (
 				F73A66861EB5CB6800BDD4CF /* Sources */,
 				F73A66871EB5CB6800BDD4CF /* Frameworks */,
@@ -191,9 +189,9 @@
 			dependencies = (
 				F73A668C1EB5CB6800BDD4CF /* PBXTargetDependency */,
 			);
-			name = aUITests;
+			name = timeUITests;
 			productName = aUITests;
-			productReference = F73A668A1EB5CB6800BDD4CF /* aUITests.xctest */;
+			productReference = F73A668A1EB5CB6800BDD4CF /* timeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -222,7 +220,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F73A66661EB5CB6800BDD4CF /* Build configuration list for PBXProject "a" */;
+			buildConfigurationList = F73A66661EB5CB6800BDD4CF /* Build configuration list for PBXProject "time" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -235,9 +233,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F73A666A1EB5CB6800BDD4CF /* a */,
-				F73A667E1EB5CB6800BDD4CF /* aTests */,
-				F73A66891EB5CB6800BDD4CF /* aUITests */,
+				F73A666A1EB5CB6800BDD4CF /* time */,
+				F73A667E1EB5CB6800BDD4CF /* timeTests */,
+				F73A66891EB5CB6800BDD4CF /* timeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -280,7 +278,6 @@
 				F73A66A71EBB5A2700BDD4CF /* ImageViewController.swift in Sources */,
 				F73A66A31EBA511B00BDD4CF /* MemoViewController.swift in Sources */,
 				F73A666F1EB5CB6800BDD4CF /* AppDelegate.swift in Sources */,
-				F73A66A11EB5D3CD00BDD4CF /* SubViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,12 +302,12 @@
 /* Begin PBXTargetDependency section */
 		F73A66811EB5CB6800BDD4CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F73A666A1EB5CB6800BDD4CF /* a */;
+			target = F73A666A1EB5CB6800BDD4CF /* time */;
 			targetProxy = F73A66801EB5CB6800BDD4CF /* PBXContainerItemProxy */;
 		};
 		F73A668C1EB5CB6800BDD4CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F73A666A1EB5CB6800BDD4CF /* a */;
+			target = F73A666A1EB5CB6800BDD4CF /* time */;
 			targetProxy = F73A668B1EB5CB6800BDD4CF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -462,7 +459,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.litech.aTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/a.app/a";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/time.timepp/time";
 			};
 			name = Debug;
 		};
@@ -476,7 +473,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.litech.aTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/a.app/a";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/time.timepp/time";
 			};
 			name = Release;
 		};
@@ -509,7 +506,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F73A66661EB5CB6800BDD4CF /* Build configuration list for PBXProject "a" */ = {
+		F73A66661EB5CB6800BDD4CF /* Build configuration list for PBXProject "time" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F73A66911EB5CB6800BDD4CF /* Debug */,
@@ -518,7 +515,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F73A66931EB5CB6800BDD4CF /* Build configuration list for PBXNativeTarget "a" */ = {
+		F73A66931EB5CB6800BDD4CF /* Build configuration list for PBXNativeTarget "time" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F73A66941EB5CB6800BDD4CF /* Debug */,
@@ -527,7 +524,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F73A66961EB5CB6800BDD4CF /* Build configuration list for PBXNativeTarget "aTests" */ = {
+		F73A66961EB5CB6800BDD4CF /* Build configuration list for PBXNativeTarget "timeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F73A66971EB5CB6800BDD4CF /* Debug */,
@@ -536,7 +533,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F73A66991EB5CB6800BDD4CF /* Build configuration list for PBXNativeTarget "aUITests" */ = {
+		F73A66991EB5CB6800BDD4CF /* Build configuration list for PBXNativeTarget "timeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F73A669A1EB5CB6800BDD4CF /* Debug */,
