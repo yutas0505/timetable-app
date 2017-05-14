@@ -10,7 +10,7 @@
     
     class TestCollectionViewCell: UICollectionViewCell {
         
-        @IBOutlet weak var testButton: UIButton!
+        @IBOutlet weak var testLabel: UILabel!
     }
     
 

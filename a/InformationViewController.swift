@@ -8,14 +8,32 @@
 
 import UIKit
 
-class ViewController1: UIViewController {
+class InformationViewController: UIViewController {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    var coursetitle: String?
+    var rownumber: Int = 0
     
     @IBAction func backToView1(segue: UIStoryboardSegue) {}
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        titleLabel.text = coursetitle
+        print(coursetitle)
         // Do any additional setup after loading the view.
+    }
+
+    @IBAction func memoButton(_ sender: Any) {
+        performSegue(withIdentifier: "toMemoViewController",sender: nil)
+
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMemoViewController" {
+            let memoViewController = segue.destination as! MemoViewController
+            memoViewController.rownumber = rownumber
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,15 +12,7 @@ private let unselectedRow = -1
 
 class MemoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
-    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
-        
-        return cell
-    }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
     
     @IBOutlet weak var editMemoField: UITextField!
     @IBOutlet weak var memoListView: UITableView!
@@ -28,6 +20,7 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var memoList: [String] = []
     var editRow: Int = unselectedRow
+    var rownumber: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,24 +29,23 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         editMemoField.becomeFirstResponder()
         
         let defaults = UserDefaults.standard
-        let loadedMemoList = defaults.object(forKey: "MEMO_LIST")
+        let loadedMemoList = defaults.object(forKey: "\(rownumber)")
         if (loadedMemoList as? [String] != nil) {
             memoList = loadedMemoList as! [String]
-            
+        }
     }
     
-    func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func tapSubmitButton(sender: UIButton) {
+    
+    @IBAction func submitButton(_ sender: Any) {
         applyMemo()
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return memoList.count
-    }
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
@@ -64,6 +56,13 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.textLabel?.text = memoList[indexPath.row]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return memoList.count
+        
+    }
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row >= memoList.count {
@@ -78,7 +77,7 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         return true
     }
     
-    func applyMemo() {
+        func applyMemo() {
         if editMemoField.text == nil {
             return
         }
@@ -90,11 +89,11 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         let defaults = UserDefaults.standard
-        defaults.set(memoList, forKey: "MEMO_LIST:")
+        defaults.set(memoList, forKey: "\(rownumber)")
         
         editMemoField.text = ""
         editRow = unselectedRow
         memoListView.reloadData()
         }
-    }
 }
+

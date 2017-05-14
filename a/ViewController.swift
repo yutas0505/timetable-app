@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    @IBOutlet var button: UIButton!
-    var Array: [String] = ["num1","num2","num3","num4","num5","num6","num7","num8","num9","num10",
-                  "num11","num12","num13","num14","num15","num16","num17","num18","num19","num20",
-                  "num21","num22","num23","num24","num25","num26","num27","num28","num29","num30",
-                  "num31","num32","num33","num34","num35","num36"]
+    @IBOutlet weak var timetableCollectionView: UICollectionView!
+    @IBOutlet var label: UILabel!
+    let name = ["num1","num2","num3","num4","num5","num6","num7","num8","num9","num10",
+                "num11","num12","num13","num14","num15","num16","num17","num18","num19","num20",
+                "num21","num22","num23","num24","num25","num26","num27","num28","num29","num30",
+                "num31","num32","num33","num34","num35","num36"]
     
     var selectedButton: UIButton?
     
@@ -40,34 +41,30 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     //最初からあるメソッド
     override func viewDidLoad() {
         super.viewDidLoad()
+        timetableCollectionView.delegate = self
+        timetableCollectionView.dataSource = self
     }
     
     // Cell が選択された場合
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if selectedButton != nil {
             // SubViewController へ遷移するために Segue を呼び出す
-            performSegue(withIdentifier: "toSubViewController",sender: nil)
-        }
+     
+        performSegue(withIdentifier: "toInformationViewController",sender: indexPath.row)
         
-    
-        
+    print("aaa")
         
     }
     
-    // Segue 準備
-    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if (segue.identifier == "toSubViewController") {
-            let _: SubViewController = (segue.destination as? SubViewController)!
-            
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toInformationViewController" {
+            let informationViewController = segue.destination as! InformationViewController
+            informationViewController.coursetitle = name[(sender as? Int)!]
+            informationViewController.rownumber = (sender as? Int)!
         }
     }
-    
     
     @IBAction func backToTop(segue: UIStoryboardSegue) {}
-
-
-
 
 }
 
