@@ -19,15 +19,17 @@ class InformationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = coursetitle
-        print(coursetitle)
         // Do any additional setup after loading the view.
     }
 
     @IBAction func memoButton(_ sender: Any) {
         performSegue(withIdentifier: "toMemoViewController",sender: nil)
-
-        
     }
+    
+    @IBAction func ImageButton(_ sender: Any) {
+        performSegue(withIdentifier: "toImageViewController",sender: nil)
+    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toMemoViewController" {

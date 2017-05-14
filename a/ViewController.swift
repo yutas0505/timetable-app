@@ -12,10 +12,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var timetableCollectionView: UICollectionView!
     @IBOutlet var label: UILabel!
-    let name = ["num1","num2","num3","num4","num5","num6","num7","num8","num9","num10",
-                "num11","num12","num13","num14","num15","num16","num17","num18","num19","num20",
-                "num21","num22","num23","num24","num25","num26","num27","num28","num29","num30",
-                "num31","num32","num33","num34","num35","num36"]
+    let name = ["月曜1限","火曜1限","水曜1限","木曜1限","金曜1限",
+                "月曜2限","火曜2限","水曜2限","木曜2限","金曜2限",
+                "月曜3限","火曜3限","水曜3限","木曜3限","金曜3限",
+                "月曜4限","火曜4限","水曜4限","木曜4限","金曜4限",
+                "月曜5限","火曜5限","水曜5限","木曜5限","金曜5限",
+                "月曜6限","火曜6限","水曜6限","木曜6限","金曜6限",]
     
     var selectedButton: UIButton?
     
@@ -23,7 +25,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     //データの個数を返すメソッド
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return 36
+        return 30
     }
     
     
@@ -51,8 +53,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             // SubViewController へ遷移するために Segue を呼び出す
      
         performSegue(withIdentifier: "toInformationViewController",sender: indexPath.row)
-        
-    print("aaa")
+
         
     }
     

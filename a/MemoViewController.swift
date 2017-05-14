@@ -77,7 +77,23 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         return true
     }
     
-        func applyMemo() {
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete{
+            memoList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            
+            let defaults = UserDefaults.standard
+            defaults.set(memoList, forKey: "\(rownumber)")
+
+        }
+    }
+    
+    func applyMemo() {
         if editMemoField.text == nil {
             return
         }
@@ -94,6 +110,6 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         editMemoField.text = ""
         editRow = unselectedRow
         memoListView.reloadData()
-        }
+    }
 }
 
