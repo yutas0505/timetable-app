@@ -43,15 +43,19 @@ class InformationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var classnameLabel: UITextField!
+    
+    @IBOutlet weak var classLabel: UILabel!
+    
+    
+    @IBAction func nameButton(_ sender: Any) {
+        
+        let inputText = classnameLabel.text
+        classLabel.text = inputText
+        classnameLabel.text = nil
+        
     }
-    */
+    
+
 
 }

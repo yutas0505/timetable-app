@@ -111,5 +111,6 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         editRow = unselectedRow
         memoListView.reloadData()
     }
+    
 }
 
