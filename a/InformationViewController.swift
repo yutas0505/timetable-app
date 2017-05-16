@@ -7,12 +7,15 @@
 //
 
 import UIKit
+private let unselectedRow = -1
 
-class InformationViewController: UIViewController {
+class InformationViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var titleLabel: UILabel!
     var coursetitle: String?
     var rownumber: Int = 0
+    var classList: [String] = []
+    var editRow: Int = unselectedRow
     
     @IBAction func backToView1(segue: UIStoryboardSegue) {}
 
@@ -20,6 +23,13 @@ class InformationViewController: UIViewController {
         super.viewDidLoad()
         titleLabel.text = coursetitle
         // Do any additional setup after loading the view.
+        
+        
+        let defaults = UserDefaults.standard
+        let loadedClassList = defaults.object(forKey: "\(rownumber)")
+        if (loadedClassList as? [String] != nil) {
+            classList = loadedClassList as! [String]
+        }
     }
 
     @IBAction func memoButton(_ sender: Any) {
@@ -41,19 +51,50 @@ class InformationViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+
     }
     
-    @IBOutlet weak var classnameLabel: UITextField!
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        applyClass()
+        return true
+    }
+
+    
+    
+    func applyClass() {
+        if classnameField.text == nil {
+            return
+        }
+        
+        if editRow == unselectedRow {
+            classList.append(classnameField.text!)
+        } else {
+            classList[editRow] = classnameField.text!
+        }
+        
+        let defaults = UserDefaults.standard
+        defaults.set(classList, forKey: "\(rownumber)")
+        
+        classnameField.text = ""
+        editRow = unselectedRow
+        classLabel.updateConstraints()
+    }
+
+
+    
+    @IBOutlet weak var classnameField: UITextField!
     
     @IBOutlet weak var classLabel: UILabel!
     
     
     @IBAction func nameButton(_ sender: Any) {
         
-        let inputText = classnameLabel.text
+        let inputText = classnameField.text
         classLabel.text = inputText
-        classnameLabel.text = nil
-        
+        classnameField.text = nil
+
     }
     
 

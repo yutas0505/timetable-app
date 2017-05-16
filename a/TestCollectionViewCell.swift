@@ -6,11 +6,12 @@
 //  Copyright © 2017年 Yuta Sahinai. All rights reserved.
 //
 
-    import UIKit
+import UIKit
     
-    class TestCollectionViewCell: UICollectionViewCell {
+class TestCollectionViewCell: UICollectionViewCell {
         
-        @IBOutlet weak var testLabel: UILabel!
-    }
+    @IBOutlet weak var testLabel: UILabel!
+    
+}
     
 

@@ -214,17 +214,6 @@
                                     <action selector="ImageButton:" destination="DjF-o5-anY" eventType="touchUpInside" id="F96-xA-cmV"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LAy-Zb-8N8">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q59-xY-HNu">
-                                <rect key="frame" x="166" y="84" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxk-sw-MAj">
                                 <rect key="frame" x="22" y="617" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -233,13 +222,21 @@
                                     <segue destination="F6A-s8-OEy" kind="unwind" unwindAction="backToTopWithSegue:" id="mfr-Gj-zbs"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q59-xY-HNu">
+                                <rect key="frame" x="81" y="96" width="209" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                     <connections>
                         <outlet property="classLabel" destination="Q59-xY-HNu" id="dIV-bX-CAb"/>
-                        <outlet property="classnameLabel" destination="RAB-Qc-gCA" id="5S4-C8-Aj2"/>
+                        <outlet property="classnameField" destination="RAB-Qc-gCA" id="eqV-AA-7wk"/>
                         <outlet property="titleLabel" destination="cN0-y7-gWw" id="ZmB-5v-dbU"/>
                         <segue destination="J4Q-Ts-tsP" kind="show" identifier="toMemoViewController" id="2vO-CA-tbQ"/>
                         <segue destination="2MH-TE-3Su" kind="show" identifier="toImageViewController" id="fxi-cD-edj"/>
@@ -294,7 +291,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="photoImageView" destination="oJl-Ng-h8h" id="qC5-iJ-j6u"/>
+                        <outlet property="photoImageView" destination="oJl-Ng-h8h" id="hxb-j2-QRb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7TY-v2-GWx" userLabel="First Responder" sceneMemberID="firstResponder"/>

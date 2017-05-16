@@ -1,14 +1,18 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9A49B299A2B6FF2EC904F08D8D335C84F70BA02D",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9A49B299A2B6FF2EC904F08D8D335C84F70BA02D+++EEDB2C4",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "9A49B299A2B6FF2EC904F08D8D335C84F70BA02D" : 9223372036854775807
+    "9A49B299A2B6FF2EC904F08D8D335C84F70BA02D+++2A24030" : 9223372036854775807,
+    "9A49B299A2B6FF2EC904F08D8D335C84F70BA02D+++EEDB2C4" : 9223372036854775807,
+    "CF16EFF157D6C81C76588FE52751B2396451B5BD+++7F1106B" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F6E592D4-8898-4699-AFE5-86215692E4C3",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "9A49B299A2B6FF2EC904F08D8D335C84F70BA02D" : "time\/a\/"
+    "9A49B299A2B6FF2EC904F08D8D335C84F70BA02D+++2A24030" : "time\/a\/",
+    "9A49B299A2B6FF2EC904F08D8D335C84F70BA02D+++EEDB2C4" : "timetable-app\/",
+    "CF16EFF157D6C81C76588FE52751B2396451B5BD+++7F1106B" : "time\/a\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "time",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -17,12 +21,17 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yutas0505\/timetable-app.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9A49B299A2B6FF2EC904F08D8D335C84F70BA02D"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9A49B299A2B6FF2EC904F08D8D335C84F70BA02D+++2A24030"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yutas0505\/timetable-app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9A49B299A2B6FF2EC904F08D8D335C84F70BA02D+++EEDB2C4"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yutas0505\/schedule-app.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9A49B299A2B6FF2EC904F08D8D335C84F70BA02D"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CF16EFF157D6C81C76588FE52751B2396451B5BD+++7F1106B"
     }
   ]
 }

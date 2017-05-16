@@ -18,7 +18,7 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate, UII
     let userDefaults = UserDefaults.standard
     
     var rownumber: Int = 0
-
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,10 +47,6 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate, UII
             picker.delegate = self
             self.present(picker, animated: true, completion: nil)
             
-            let imageData = UIImageJPEGRepresentation(photoImageView.image!, 1);
-            userDefaults.set(imageData, forKey: "imageData")
-            userDefaults.synchronize()
-
         }
     }
     
@@ -67,7 +63,13 @@ class ImageViewController: UIViewController, UINavigationControllerDelegate, UII
         
         let defaults = UserDefaults.standard
         defaults.set(photoImageView, forKey: "\(rownumber)")
-    }
+        
+        let imageData = UIImageJPEGRepresentation(photoImageView.image!, 1);
+        userDefaults.set(imageData, forKey: "imageData")
+        userDefaults.synchronize()
+
+        
+        }
     
     @IBAction func pushSaveButton(sender: UIButton) {
         

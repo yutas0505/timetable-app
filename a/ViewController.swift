@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var timetableCollectionView: UICollectionView!
-    @IBOutlet var label: UILabel!
+    
     let name = ["月曜1限","火曜1限","水曜1限","木曜1限","金曜1限",
                 "月曜2限","火曜2限","水曜2限","木曜2限","金曜2限",
                 "月曜3限","火曜3限","水曜3限","木曜3限","金曜3限",
@@ -20,12 +20,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 "月曜6限","火曜6限","水曜6限","木曜6限","金曜6限",]
     
     var selectedButton: UIButton?
-    
+    var memoList: [String] = []
+    var rownumber: Int = 0
+
+
     
     //データの個数を返すメソッド
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return 30
+
     }
     
     
@@ -45,6 +49,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         timetableCollectionView.delegate = self
         timetableCollectionView.dataSource = self
+        
+        let defaults = UserDefaults.standard
+        let loadedMemoList = defaults.object(forKey: "\(rownumber)")
+        if (loadedMemoList as? [String] != nil) {
+            memoList = loadedMemoList as! [String]
+        }
+
     }
     
     // Cell が選択された場合
