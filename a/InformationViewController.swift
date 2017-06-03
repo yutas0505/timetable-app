@@ -15,15 +15,21 @@ class InformationViewController: UIViewController, UITextFieldDelegate {
     var coursetitle: String?
     var rownumber: Int = 0
     var classList: [String] = []
-    var editRow: Int = unselectedRow
+    var nameList: [String] = []
+    
     
     @IBAction func backToView1(segue: UIStoryboardSegue) {}
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = coursetitle
-        // Do any additional setup after loading the view.
         
+        titleLabel.text = coursetitle
+        
+        let userDefaults = UserDefaults.standard
+        if let labelText = userDefaults.string(forKey: "labelText") {
+            classLabel.text = labelText
+        }
         
         let defaults = UserDefaults.standard
         let loadedClassList = defaults.object(forKey: "\(rownumber)")
@@ -31,6 +37,14 @@ class InformationViewController: UIViewController, UITextFieldDelegate {
             classList = loadedClassList as! [String]
         }
     }
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+        
+    }
+
 
     @IBAction func memoButton(_ sender: Any) {
         performSegue(withIdentifier: "toMemoViewController",sender: nil)
@@ -46,54 +60,29 @@ class InformationViewController: UIViewController, UITextFieldDelegate {
             let memoViewController = segue.destination as! MemoViewController
             memoViewController.rownumber = rownumber
         }
-    }
+        
+        if segue.identifier == "toImageViewController" {
+            _ = segue.destination as! ImageViewController
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-
-    }
-    
-    
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        applyClass()
-        return true
-    }
-
-    
-    
-    func applyClass() {
-        if classnameField.text == nil {
-            return
         }
-        
-        if editRow == unselectedRow {
-            classList.append(classnameField.text!)
-        } else {
-            classList[editRow] = classnameField.text!
-        }
-        
-        let defaults = UserDefaults.standard
-        defaults.set(classList, forKey: "\(rownumber)")
-        
-        classnameField.text = ""
-        editRow = unselectedRow
-        classLabel.updateConstraints()
     }
-
 
     
     @IBOutlet weak var classnameField: UITextField!
     
     @IBOutlet weak var classLabel: UILabel!
     
-    
     @IBAction func nameButton(_ sender: Any) {
         
-        let inputText = classnameField.text
-        classLabel.text = inputText
-        classnameField.text = nil
+        _ = classnameField.text
+        classLabel.text = classnameField.text
+        
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(classLabel.text, forKey: "labelText")
+        userDefaults.synchronize()
+
+        let defaults = UserDefaults.standard
+        defaults.set(classList, forKey: "\(rownumber)")
 
     }
     

@@ -32,13 +32,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     }
     
-    
     //データを返すメソッド
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         //コレクションビューから識別子「TestCell」のセルを取得する。
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TestCell", for: indexPath) as! TestCollectionViewCell
         
+        //セルのラベルに番号を設定する。
+        cell.testLabel.text = String(indexPath.row + 1)        
         return cell
         
     }
@@ -77,8 +78,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     @IBAction func backToTop(segue: UIStoryboardSegue) {}
-
+    
 }
+
 
     
     

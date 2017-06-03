@@ -126,6 +126,9 @@
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="testLabel" destination="9co-s4-SPc" id="BOH-Bd-D8D"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -222,7 +225,7 @@
                                     <segue destination="F6A-s8-OEy" kind="unwind" unwindAction="backToTopWithSegue:" id="mfr-Gj-zbs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q59-xY-HNu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q59-xY-HNu">
                                 <rect key="frame" x="81" y="96" width="209" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -264,7 +267,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="アルバム"/>
                                 <connections>
-                                    <action selector="onTappedAlbumButton" destination="2MH-TE-3Su" eventType="touchUpInside" id="w1E-sG-PBS"/>
+                                    <action selector="onTappedAlbumButton" destination="2MH-TE-3Su" eventType="touchUpInside" id="rBP-8K-0wa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5q-oX-YP0">
@@ -284,14 +287,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="保存"/>
                                 <connections>
-                                    <action selector="pushSaveButtonWithSender:" destination="2MH-TE-3Su" eventType="touchUpInside" id="INv-xD-ytp"/>
+                                    <action selector="pushSaveButtonWithSender:" destination="2MH-TE-3Su" eventType="touchUpInside" id="OTP-44-2dZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="photoImageView" destination="oJl-Ng-h8h" id="hxb-j2-QRb"/>
+                        <outlet property="photoImageView" destination="oJl-Ng-h8h" id="WEf-eq-3lP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7TY-v2-GWx" userLabel="First Responder" sceneMemberID="firstResponder"/>

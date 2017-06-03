@@ -24,7 +24,7 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         memoListView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         editMemoField.becomeFirstResponder()
         
@@ -45,7 +45,6 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         applyMemo()
     }
     
-
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
@@ -56,6 +55,7 @@ class MemoViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.textLabel?.text = memoList[indexPath.row]
         return cell
     }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
