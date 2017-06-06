@@ -14,8 +14,6 @@ class InformationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     var coursetitle: String?
     var rownumber: Int = 0
-    var classList: [String] = []
-    var nameList: [String] = []
     
     
     @IBAction func backToView1(segue: UIStoryboardSegue) {}
@@ -27,15 +25,10 @@ class InformationViewController: UIViewController, UITextFieldDelegate {
         titleLabel.text = coursetitle
         
         let userDefaults = UserDefaults.standard
-        if let labelText = userDefaults.string(forKey: "labelText") {
+        if let labelText = userDefaults.string(forKey: "\(rownumber)") {
             classLabel.text = labelText
         }
         
-        let defaults = UserDefaults.standard
-        let loadedClassList = defaults.object(forKey: "\(rownumber)")
-        if (loadedClassList as? [String] != nil) {
-            classList = loadedClassList as! [String]
-        }
     }
     
     
@@ -77,15 +70,12 @@ class InformationViewController: UIViewController, UITextFieldDelegate {
         _ = classnameField.text
         classLabel.text = classnameField.text
         
-        let userDefaults = UserDefaults.standard
-        userDefaults.set(classLabel.text, forKey: "labelText")
-        userDefaults.synchronize()
-
+        
         let defaults = UserDefaults.standard
-        defaults.set(classList, forKey: "\(rownumber)")
+        defaults.set(classLabel.text, forKey: "\(rownumber)")
+        defaults.synchronize()
 
     }
     
-
 
 }

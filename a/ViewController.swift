@@ -12,6 +12,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var timetableCollectionView: UICollectionView!
     
+    
     let name = ["月曜1限","火曜1限","水曜1限","木曜1限","金曜1限",
                 "月曜2限","火曜2限","水曜2限","木曜2限","金曜2限",
                 "月曜3限","火曜3限","水曜3限","木曜3限","金曜3限",
@@ -22,6 +23,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var selectedButton: UIButton?
     var memoList: [String] = []
     var rownumber: Int = 0
+    
+    @IBOutlet weak var testLabel: UILabel!
+    var labelText: String?
 
 
     
@@ -39,7 +43,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TestCell", for: indexPath) as! TestCollectionViewCell
         
         //セルのラベルに番号を設定する。
-        cell.testLabel.text = String(indexPath.row + 1)        
+        cell.testLabel.text = String(indexPath.row + 1)
+
+        
         return cell
         
     }
@@ -50,6 +56,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         timetableCollectionView.delegate = self
         timetableCollectionView.dataSource = self
+        
         
         let defaults = UserDefaults.standard
         let loadedMemoList = defaults.object(forKey: "\(rownumber)")
@@ -79,11 +86,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBAction func backToTop(segue: UIStoryboardSegue) {}
     
+    func tableView(tableView: UITableView, didSelectedRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row == 0{
+            let informationViewController = self.storyboard!.instantiateViewController(withIdentifier: "categorySelect")
+            self.present(informationViewController, animated: true, completion: nil)
+        }
+    }
+
+    
 }
-
-
-    
-    
-
-
 
