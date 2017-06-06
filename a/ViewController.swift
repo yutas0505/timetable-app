@@ -23,10 +23,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var selectedButton: UIButton?
     var memoList: [String] = []
     var rownumber: Int = 0
-    
-    @IBOutlet weak var testLabel: UILabel!
-    var labelText: String?
-
+    var text1: String?
 
     
     //データの個数を返すメソッド
@@ -42,9 +39,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         //コレクションビューから識別子「TestCell」のセルを取得する。
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TestCell", for: indexPath) as! TestCollectionViewCell
         
-        //セルのラベルに番号を設定する。
-        cell.testLabel.text = String(indexPath.row + 1)
-
+        cell.testLabel.text = text1
         
         return cell
         

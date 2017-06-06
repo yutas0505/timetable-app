@@ -18,7 +18,7 @@ class InformationViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func backToView1(segue: UIStoryboardSegue) {}
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,6 +58,13 @@ class InformationViewController: UIViewController, UITextFieldDelegate {
             _ = segue.destination as! ImageViewController
 
         }
+        
+        if segue.identifier == "toViewController" {
+            let ViewController = segue.destination as! ViewController
+            ViewController.text1 = "数学"
+            
+        }
+        
     }
 
     
@@ -70,12 +77,10 @@ class InformationViewController: UIViewController, UITextFieldDelegate {
         _ = classnameField.text
         classLabel.text = classnameField.text
         
-        
         let defaults = UserDefaults.standard
         defaults.set(classLabel.text, forKey: "\(rownumber)")
         defaults.synchronize()
 
     }
-    
 
 }
