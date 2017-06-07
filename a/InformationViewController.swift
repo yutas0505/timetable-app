@@ -31,7 +31,17 @@ class InformationViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        //userDefaultsに保存したデータの呼び出し
+        let userDefaults = UserDefaults.standard
+        if let labelText = userDefaults.string(forKey: "\(rownumber)") {
+            classLabel.text = labelText
+        }
+
+    }
     
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -61,7 +71,7 @@ class InformationViewController: UIViewController, UITextFieldDelegate {
         
         if segue.identifier == "toViewController" {
             let ViewController = segue.destination as! ViewController
-            ViewController.text1 = "数学"
+            ViewController.text1 = classLabel.text
             
         }
         

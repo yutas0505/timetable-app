@@ -39,11 +39,22 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         //コレクションビューから識別子「TestCell」のセルを取得する。
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TestCell", for: indexPath) as! TestCollectionViewCell
         
-        cell.testLabel.text = text1
+        cell.testLabel.text = ""
+        
+        let userDefaults = UserDefaults.standard
+        if let labelText = userDefaults.string(forKey: "\(indexPath.row)"){
+            cell.testLabel.text = labelText
+        }
         
         return cell
-        
+
     }
+    
+    //画面が表示された直後
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+    }
+
     
     
     //最初からあるメソッド
@@ -58,7 +69,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if (loadedMemoList as? [String] != nil) {
             memoList = loadedMemoList as! [String]
         }
-
     }
     
     // Cell が選択された場合
