@@ -51,8 +51,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     //画面が表示された直後
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.timetableCollectionView.reloadData()
+        
     }
 
     
